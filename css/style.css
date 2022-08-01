@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-size: large;
+  width: 100%;
+  overflow-x: hidden;
+}
+body .logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+}
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header a {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-decoration: none;
+}
+body main {
+  background-color: #FAFAFA;
+}
+body footer {
+  color: #fff;
+  background-color: #353535;
+  margin: 0px;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  body footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+body footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  body footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+body footer ul li {
+  display: flex;
+  margin: 1rem 0rem;
+}
+body footer ul li i {
+  margin-right: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+body footer ul li a {
+  color: #fff;
+}
+body a {
+  text-decoration: none;
+  color: #000;
+}
+body .btn {
+  background-image: linear-gradient(#ff79da, #9356dc);
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 100px;
+  border: 0px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 2.5px 2.5px 10px;
+}
+body .btn:hover {
+  box-shadow: rgb(0, 0, 0) 2.5px 2.5px 10px;
+  opacity: 0.9;
+}
+body .like {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+body .like .one {
+  display: block;
+}
+body .like .two {
+  display: none;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .like:hover {
+  animation: forLike 1s;
+}
+body .like:hover .one {
+  display: none;
+}
+body .like:hover .two {
+  display: block;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes valid {
+  0% {
+    margin-right: -4rem;
+    transform: translateX(5rem);
+  }
+  100% {
+    margin-right: 0;
+    transform: translateX(0);
+  }
+}
+@keyframes valid2 {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes loadingPage {
+  0% {
+    opacity: 1;
+    display: flex;
+    position: fixed;
+    z-index: 2;
+  }
+  99% {
+    opacity: 1;
+    display: flex;
+    position: fixed;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    z-index: -2;
+  }
+}
+@keyframes forLike {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 2;
+  animation: loadingPage 2s;
+  animation-fill-mode: both;
+}
+.loader span {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #9356dc #9356dc transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader span::after, .loader span::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #ff79da #ff79da;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader span::before {
+  width: 64px;
+  height: 64px;
+  border-color: #99e2d0 #99e2d0 transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+.location {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.location i {
+  margin-right: 1rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.steps {
+  background-color: #fff;
+  padding: 1rem;
+}
+.steps ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .steps ol {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.steps ol li {
+  display: flex;
+  background-color: #FAFAFA;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 1.25rem;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 2.5px 2.5px 10px;
+}
+.steps ol li .num {
+  background: #9356dc;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -0.75rem;
+}
+.steps ol li i {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 1rem;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.restos {
+  padding: 1rem;
+}
+.restos .cards {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+@media (min-width: 992px) {
+  .restos .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+}
+.restos .cards .card {
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0.75rem 0rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 2.5px 2.5px 10px;
+}
+@media (min-width: 992px) {
+  .restos .cards .card {
+    flex: 40%;
+    margin: 1rem;
+  }
+}
+.restos .cards .card span {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+.restos .cards .card img {
+  height: 12rem;
+  width: 100%;
+  border-radius: 1rem 1rem 0px 0px;
+  object-fit: cover;
+}
+.restos .cards .card .sub-sec {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restos .cards .card .sub-sec .infos {
+  justify-content: center;
+}
+.restos .cards .card .sub-sec .infos .name {
+  margin: 0px;
+  margin-bottom: 0.25rem;
+}
+.restos .cards .card .sub-sec .infos .place {
+  margin: 0px;
+  font-weight: 100;
+}
+
+.topimg {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.resto {
+  margin-top: -5rem;
+  border-radius: 3rem 3rem 0 0;
+  z-index: 1;
+  position: relative;
+  background-color: #f3f3f3;
+}
+.resto .restohead {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resto .restohead button {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.resto .menu {
+  margin: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  .resto .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.resto .menu .submenu {
+  max-width: 100%;
+}
+.resto .menu .submenu .f0 {
+  animation: fadeInUp 0.4s;
+}
+.resto .menu .submenu .f1 {
+  animation: fadeInUp 0.8s;
+}
+.resto .menu .submenu .f2 {
+  animation: fadeInUp 1.2s;
+}
+.resto .menu .submenu .f3 {
+  animation: fadeInUp 1.6s;
+}
+.resto .menu .submenu .f4 {
+  animation: fadeInUp 2s;
+}
+.resto .menu .submenu .title {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.resto .menu .submenu .title::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.resto .menu .submenu .plate {
+  background-color: #fff;
+  padding-left: 1rem;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 2.5px 2.5px 10px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  max-width: 100%;
+  overflow: hidden;
+  animation-fill-mode: both;
+}
+.resto .menu .submenu .plate-info {
+  flex: 1;
+  padding: 1rem 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.resto .menu .submenu .plate-info h3, .resto .menu .submenu .plate-info p {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.resto .menu .submenu .plate-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1rem;
+  font-weight: bold;
+}
+.resto .menu .submenu .plate .validation {
+  background-color: #99e2d0;
+  width: 4rem;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: -4rem;
+  transform: translateX(5rem);
+}
+.resto .menu .submenu .plate .validation-icon {
+  height: 0.5rem;
+  width: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.resto .menu .submenu .plate .validation-icon i {
+  color: #fff;
+}
+.resto .menu .submenu .plate:hover .validation {
+  animation: valid 0.5s;
+  animation-fill-mode: both;
+  margin-right: 0;
+  transform: translateX(0);
+}
+.resto .menu .submenu .plate:hover .validation-icon {
+  animation: valid2 1s;
+  animation-fill-mode: both;
+  transform: rotate(0);
+}
+.resto .order {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.resto .order button {
+  width: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

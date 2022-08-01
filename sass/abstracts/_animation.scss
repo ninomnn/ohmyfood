@@ -1,0 +1,77 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes valid {
+    0% {
+        margin-right: -4rem;
+        transform: translateX(5rem);
+    }
+    100% {
+        margin-right: 0;
+        transform: translateX(0);
+    }
+}
+
+@keyframes valid2 {
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+} 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+}
+
+@keyframes loadingPage {
+    0%{
+        opacity: 1;
+        display: flex;
+        position: fixed;
+        z-index: 2;
+    }
+    99% {
+        opacity: 1;
+        display: flex;
+        position: fixed;
+        z-index: 2;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        position: absolute;
+        z-index: -2;
+    }
+}
+
+@keyframes forLike {
+    0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+}

@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: large;
+    width: 100%;
+    overflow-x: hidden;
+    .logo {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            position: absolute;
+            left: 2rem;
+            height: 2rem;
+            width: 2rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    main {
+        background-color: #FAFAFA;
+    }
+    footer {
+        color: #fff;
+        background-color: #353535;
+        margin: 0px;
+        padding: 1rem;
+        @media (min-width:768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            @media (min-width:768px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            li {
+                display: flex;
+                margin: 1rem 0rem;
+                i {
+                    margin-right: 1rem;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    .btn {
+        background-image: linear-gradient($secondary,$primary);
+        padding: 1rem 1.5rem;
+        font-size: 1.2rem;
+        color: #fff;
+        border-radius: 100px;
+        border: 0px;
+        cursor: pointer;
+        box-shadow: $shadow;
+        &:hover {
+            box-shadow: $shadow2;
+            opacity: 0.9;
+        }
+    }
+    .like {
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        cursor: pointer;
+        position: relative;
+        .one {
+            display: block;
+        }
+        .two {
+            display: none;
+            background: -webkit-linear-gradient($primary, $secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &:hover {
+            animation: forLike 1s;
+            .one {
+                display: none;
+            }
+            .two {
+                display: block;
+            }
+        }
+    }
+}
