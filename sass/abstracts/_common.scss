@@ -93,21 +93,18 @@ body {
         position: relative;
         .one {
             display: block;
+            position: absolute;
         }
         .two {
             display: none;
             background: -webkit-linear-gradient($primary, $secondary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            position: absolute;
         }
-        &:hover {
+        &:hover .two {
             animation: forLike 1s;
-            .one {
-                display: none;
-            }
-            .two {
-                display: block;
-            }
+            display: block;
         }
     }
 }

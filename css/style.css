@@ -100,27 +100,24 @@ body .like {
 }
 body .like .one {
   display: block;
+  position: absolute;
 }
 body .like .two {
   display: none;
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-body .like:hover {
-  animation: forLike 1s;
-}
-body .like:hover .one {
-  display: none;
+  position: absolute;
 }
 body .like:hover .two {
+  animation: forLike 1s;
   display: block;
 }
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(2rem);
   }
   100% {
     opacity: 1;
@@ -302,6 +299,12 @@ body .like:hover .two {
   align-items: center;
   display: flex;
 }
+.steps ol li:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.steps ol li:hover i {
+  color: #9356dc;
+}
 
 .restos {
   padding: 1rem;
@@ -415,19 +418,43 @@ body .like:hover .two {
   max-width: 100%;
 }
 .resto .menu .submenu .f0 {
-  animation: fadeInUp 0.4s;
+  animation: fadeInUp 0.4615384615s;
 }
 .resto .menu .submenu .f1 {
-  animation: fadeInUp 0.8s;
+  animation: fadeInUp 0.9230769231s;
 }
 .resto .menu .submenu .f2 {
-  animation: fadeInUp 1.2s;
+  animation: fadeInUp 1.3846153846s;
 }
 .resto .menu .submenu .f3 {
-  animation: fadeInUp 1.6s;
+  animation: fadeInUp 1.8461538462s;
 }
 .resto .menu .submenu .f4 {
-  animation: fadeInUp 2s;
+  animation: fadeInUp 2.3076923077s;
+}
+.resto .menu .submenu .f5 {
+  animation: fadeInUp 2.7692307692s;
+}
+.resto .menu .submenu .f6 {
+  animation: fadeInUp 3.2307692308s;
+}
+.resto .menu .submenu .f7 {
+  animation: fadeInUp 3.6923076923s;
+}
+.resto .menu .submenu .f8 {
+  animation: fadeInUp 4.1538461538s;
+}
+.resto .menu .submenu .f9 {
+  animation: fadeInUp 4.6153846154s;
+}
+.resto .menu .submenu .f10 {
+  animation: fadeInUp 5.0769230769s;
+}
+.resto .menu .submenu .f11 {
+  animation: fadeInUp 5.5384615385s;
+}
+.resto .menu .submenu .f12 {
+  animation: fadeInUp 6s;
 }
 .resto .menu .submenu .title {
   position: relative;

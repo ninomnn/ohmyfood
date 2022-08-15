@@ -106,6 +106,12 @@
                 align-items: center;
                 display: flex;
             }
+            &:hover {
+                background-color: rgba(147, 86, 220, 0.2);
+                i {
+                    color: $primary;
+                }
+            }
         }
     }
 }

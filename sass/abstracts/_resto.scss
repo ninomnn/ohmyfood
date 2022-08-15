@@ -40,18 +40,42 @@
     .submenu {
       max-width: 100%;
       .f0 {
-        animation: fadeInUp calc($apparition / 5);
+        animation: fadeInUp calc($apparition / 13);
       }
       .f1 {
-        animation: fadeInUp calc($apparition / 5 * 2);
+        animation: fadeInUp calc($apparition / 13 * 2);
       }
       .f2 {
-        animation: fadeInUp calc($apparition / 5 * 3);
+        animation: fadeInUp calc($apparition / 13 * 3);
       }
       .f3 {
-        animation: fadeInUp calc($apparition / 5 * 4);
+        animation: fadeInUp calc($apparition / 13 * 4);
       }
       .f4 {
+        animation: fadeInUp calc($apparition / 13 * 5);
+      }
+      .f5 {
+        animation: fadeInUp calc($apparition / 13 * 6);
+      }
+      .f6 {
+        animation: fadeInUp calc($apparition / 13 * 7);
+      }
+      .f7 {
+        animation: fadeInUp calc($apparition / 13 * 8);
+      }
+      .f8 {
+        animation: fadeInUp calc($apparition / 13 * 9);
+      }
+      .f9 {
+        animation: fadeInUp calc($apparition / 13 * 10);
+      }
+      .f10 {
+        animation: fadeInUp calc($apparition / 13 * 11);
+      }
+      .f11 {
+        animation: fadeInUp calc($apparition / 13 * 12);
+      }
+      .f12 {
         animation: fadeInUp $apparition;
       }
       .title {
